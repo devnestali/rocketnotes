@@ -8,7 +8,9 @@ export function Details() {
       <h1>Hello Word! My name is Victor </h1>
       <span>Victor Nestali</span>
 
-      <Button />
+      <Button title="Login" loading />
+      <Button title="Cadastrar"/>
+      <Button title="Voltar"/>
     </Container>
   )
 }
