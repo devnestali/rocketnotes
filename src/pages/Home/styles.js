@@ -48,7 +48,20 @@ export const Search = styled.div`
 `;
 export const Content = styled.div`
   grid-area: content;
-  background: blue;
+  padding: 0 64px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.COLORS.ORANGE};
+    border-radius: 6px;
+  }
 `;
 export const NewNote = styled.button`
   grid-area: newnote;
