@@ -17,9 +17,9 @@ export function Home() {
       <Header />
 
       <Menu>
-        <li><ButtonText title="Todos" /></li>
-        <li><ButtonText title="React"/></li>
-        <li><ButtonText title="NodeJS"/></li>
+        <li><ButtonText title="Todos" isActive/></li>
+        <li><ButtonText title="React" /></li>
+        <li><ButtonText title="NodeJS" /></li>
       </Menu>
 
       <Search>
@@ -38,7 +38,7 @@ export function Home() {
         </Section>
       </Content>
 
-      <NewNote>
+      <NewNote to="/new">
         <FiPlus />
         Criar Nota
       </NewNote>
