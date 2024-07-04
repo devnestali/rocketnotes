@@ -9,6 +9,29 @@ export const Container = styled.div`
   grid-template-areas: 
   "header"
   "content";
+
+  > main {
+    grid-area: content;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+    width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.COLORS.ORANGE};
+      border-radius: 6px;
+    }
+  }
+
+  .tags {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 `;
 
 export const Form = styled.form`
