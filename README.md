@@ -20,15 +20,15 @@
   npm run dev
 ```
 
-* You can see all the pages changing in **index.jsx** in the paste **routes** **<AuthRoutes />** for **<AppRoutes />**. In **<AuthRoutes />** you'll see the routes for authorizations and in **<AppRoutes />** the application routes
+* You can see all the pages changing in **index.jsx** in the paste **routes** **AuthRoutes** for **AppRoutes**. In **AuthRoutes** you'll see the routes for authorizations and in **AppRoutes** the application routes
 
-* For **<AuthRoutes />**:
+* For **AuthRoutes**:
 ```bash
     '/'
     '/register'
 ```
 
-* For **<AppRoutes />**:
+* For **AppRoutes**:
 ```bash
     '/'
     '/new'
