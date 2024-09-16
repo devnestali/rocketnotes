@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiPlus } from 'react-icons/fi'
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
 
@@ -16,6 +17,8 @@ export function Home() {
   const [tagsSelected, setTagsSelected] = useState([]);
   const [notes, setNotes] = useState([]);
 
+  const navigate = useNavigate();
+
   function handleTagsSelected(tagName) {
     if(tagName === "All") {
       return setTagsSelected([]);
@@ -30,6 +33,10 @@ export function Home() {
       setTagsSelected(prevTagName => [...prevTagName, tagName]);
     }
     
+  }
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`);
   }
 
   
@@ -94,6 +101,7 @@ export function Home() {
               <Note
                 key={String(note.id)}
                 data={note}
+                onClick={() => handleDetails(note.id)}
               />            
             ))
           }
